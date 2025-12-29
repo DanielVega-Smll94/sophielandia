@@ -1,0 +1,33 @@
+---
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Sophielandia</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+
+	<!-- <body class="bg-cream text-gray-700 antialiased"> -->
+	<!-- <body class="bg-gradient-to-b from-cream to-white text-gray-700 antialiased"> -->
+	<body
+		class="bg-gradient-to-b from-cream to-white text-gray-700 antialiased"
+	>
+		<slot />
+	</body>
+
+	<footer class="py-10 text-center text-sm text-gray-400">
+		<p class="font-serif text-gray-600">Sophielandia</p>
+		<p class="mt-1">Hecho con amor 🤍</p>
+		<p class="mt-4">© {new Date().getFullYear()}</p>
+	</footer>
+</html>

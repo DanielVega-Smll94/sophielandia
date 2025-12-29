@@ -1,0 +1,37 @@
+---
+const { title, description, icon, href, badge, disabled = false } = Astro.props;
+---
+
+<div
+  class={`relative rounded-[3rem] p-12 transition-all
+  ${disabled ? "bg-white/60 opacity-70" : "bg-white shadow-xl hover:-translate-y-2"}
+  `}
+>
+  {badge && (
+    <span class="absolute -top-4 right-8 bg-primary text-white text-xs px-4 py-1 rounded-full">
+      {badge}
+    </span>
+  )}
+
+  <div class="text-6xl mb-8">{icon}</div>
+
+  <h3 class="text-3xl font-serif mb-4">
+    {title}
+  </h3>
+
+  <p class="text-muted leading-relaxed mb-10">
+    {description}
+  </p>
+
+  {!disabled && href && (
+    <a href={href} class="text-primary font-medium text-lg">
+      Ver colección →
+    </a>
+  )}
+
+  {disabled && (
+    <p class="italic text-muted text-sm">
+      Próximamente ✨
+    </p>
+  )}
+</div>

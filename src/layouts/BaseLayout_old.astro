@@ -1,0 +1,35 @@
+---
+import "../styles/global.css";
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sophielandia · Handmade studio</title>
+
+    <!-- SEO básico -->
+    <meta
+      name="description"
+      content="Sophielandia es un espacio artesanal inspirado en Sophie, donde nacen creaciones hechas a mano para regalar recuerdos y momentos especiales."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon (luego lo cambiamos) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+
+  <body class="antialiased">
+    <!-- Contenido -->
+    <slot />
+  </body>
+</html>

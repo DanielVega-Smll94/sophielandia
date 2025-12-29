@@ -1,0 +1,53 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import UniverseCard from "../components/UniverseCard.astro";
+---
+
+<BaseLayout>
+  <Hero />
+
+  <main id="universos" class="py-32">
+    <div class="max-w-6xl mx-auto px-6">
+      
+      <h2 class="text-4xl font-serif mb-4">
+        Universos de Sophielandia
+      </h2>
+
+      <p class="text-muted max-w-lg mb-16">
+        Cada rincón tiene su propia historia.
+        Elige por dónde comenzar.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-12">
+        <UniverseCard
+          icon="🧶"
+          title="Crochet"
+          badge="Principal"
+          description="Amigurumis, flores y detalles tejidos a mano, puntada a puntada."
+          href="https://crochet.sophielandia.com"
+        />
+
+        <UniverseCard
+          icon="🍰"
+          title="Cocina"
+          description="Recetas dulces y saladas para compartir en familia."
+          disabled={true}
+        />
+
+        <UniverseCard
+          icon="🎁"
+          title="Detalles"
+          description="Pequeños regalos con intención y significado."
+          disabled={true}
+        />
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-24 text-center text-muted">
+    <p class="font-serif text-xl mb-2">Sophielandia</p>
+    <p class="italic">Hecho con amor, calma y propósito ♡</p>
+    <p class="mt-6 text-sm">© 2025</p>
+  </footer>
+</BaseLayout>

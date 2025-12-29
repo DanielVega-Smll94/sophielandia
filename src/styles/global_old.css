@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* ===== Sophielandia design tokens ===== */
+/* @theme {
+  --color-primary: #F6C1D1;
+  --color-cream: #FFF7F3;
+  --color-sage: #C9D6C5;
+  --color-lavender: #D6CDEA;
+  --color-gold: #D9B98C;
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  a {
+    transition: color 0.2s ease;
+  }
+} */
+/* ===== Sophielandia Tokens ===== */
+@theme {
+  --color-primary: #F6C1D1;
+  --color-cream: #FFF7F3;
+  --color-sage: #C9D6C5;
+  --color-lavender: #D6CDEA;
+  --color-gold: #D9B98C;
+  --color-ink: #1f2937;
+}
+
+/* Base */
+@layer base {
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--color-ink);
+    background: linear-gradient(to bottom, color-mix(in oklab, var(--color-cream) 90%, white), white);
+  }
+}
+
+/* Helpers */
+@layer utilities {
+  .glass {
+    background: color-mix(in oklab, white 80%, transparent);
+    backdrop-filter: blur(10px);
+  }
+}

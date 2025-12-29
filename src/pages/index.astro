@@ -1,11 +1,78 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import UniverseCard from "../components/UniverseCard.astro";
+import Footer from "../components/Footer.astro";
+import ManifestSection from "../components/ManifestSection.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout>
+  <Hero />
+
+  <section id="universos" class="py-40">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-serif mb-4">Universos de Sophielandia</h2>
+
+      <p class="text-muted max-w-lg mb-20">
+        Cada rincón tiene su propia historia. Elige por dónde comenzar.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-16">
+        <!-- <UniverseCard
+          icon="/icons/yarn.svg"
+          title="Crochet"
+          badge="Principal"
+          description="Amigurumis, flores y detalles tejidos a mano, puntada a puntada."
+          href="https://crochet.sophielandia.com"
+        />
+
+        <UniverseCard
+          icon="/icons/cake.svg"
+          title="Cocina"
+          description="Recetas dulces y saladas para compartir en familia."
+          disabled={true}
+        />
+
+        <UniverseCard
+          icon="/icons/gift.svg"
+          title="Detalles"
+          description="Pequeños regalos con intención y significado."
+          disabled={true}
+        /> -->
+        <UniverseCard
+          image="/images/crochet.png"
+          title="Crochet"
+          badge="Principal"
+          description="Amigurumis, flores y detalles tejidos a mano, puntada a puntada, con intención."
+          href="https://crochet.sophielandia.com"
+        />
+
+        <UniverseCard
+          image="/images/cocina.png"
+          title="Cocina"
+          description="Recetas que nacen del corazón."
+          disabled={true}
+        />
+
+        <UniverseCard
+          image="/images/detalles.png"
+          title="Detalles"
+          description="Pequeños regalos con significado."
+          disabled={true}
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- <footer class="py-32 text-center text-muted">
+    <p class="font-serif text-xl mb-2">Sophielandia</p>
+    <p class="italic">Hecho con amor, calma y propósito ♡</p>
+    <p class="mt-6 text-sm">© 2025</p>
+  </footer> -->
+  
+  <!-- MANIFIESTO -->
+  <ManifestSection />
+
+  <!-- FOOTER -->
+  <Footer />
+</BaseLayout>

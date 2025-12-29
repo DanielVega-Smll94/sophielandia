@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import AccessCard from "../components/AccessCard.astro";
+---
+
+<!-- <div class="bg-primary text-white p-6 rounded-3xl">
+  Sophielandia 💗
+</div> -->
+
+<!-- <BaseLayout>
+	<Hero />
+
+	<section class="relative -mt-24 z-20">
+		<div class="max-w-6xl mx-auto px-6">
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<AccessCard
+					icon="🧶"
+					title="Crochet"
+					description="Creaciones hechas a mano, puntada a puntada"
+					href="https://crochet.sophielandia.com"
+				/>
+
+				<AccessCard
+					icon="🍰"
+					title="Cocina"
+					description="Recetas con amor (próximamente)"
+					disabled={true}
+				/>
+
+				<AccessCard
+					icon="🎁"
+					title="Detalles"
+					description="Ideas pensadas para regalar"
+					disabled={true}
+				/>
+			</div>
+		</div>
+	</section>
+</BaseLayout>
+ -->
+
+ <BaseLayout>
+  <Hero />
+
+  <section class="relative -mt-28 z-20 pb-32">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <AccessCard
+          icon="🧶"
+          title="Crochet"
+          description="Tejido con amor, puntada a puntada"
+          href="https://crochet.sophielandia.com"
+        />
+
+        <AccessCard
+          icon="🍰"
+          title="Cocina"
+          description="Recetas que nacen del corazón (próximamente)"
+          disabled={true}
+        />
+
+        <AccessCard
+          icon="🎁"
+          title="Detalles"
+          description="Pequeños regalos que cuentan historias"
+          disabled={true}
+        />
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>

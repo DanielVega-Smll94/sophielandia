@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import UniverseCard from "../components/UniverseCard.astro";
+---
+
+<BaseLayout>
+  <Hero />
+
+  <main id="universos" class="relative -mt-10 pb-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Título sección -->
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-serif text-gray-800">
+          Universos de Sophielandia
+        </h2>
+        <p class="mt-3 text-gray-500 max-w-xl mx-auto">
+          Elige un rincón y descubre lo que estamos creando con cariño.
+        </p>
+      </div>
+
+      <!-- Grid -->
+      <section class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <UniverseCard
+          featured={true}
+          badge="Principal"
+          icon="🧶"
+          title="Crochet"
+          description="Amigurumis, flores, llaveros y detalles tejidos a mano… puntada a puntada."
+          href="https://crochet.sophielandia.com"
+        />
+
+        <UniverseCard
+          badge="En preparación"
+          icon="🍰"
+          title="Cocina"
+          description="Recetas dulces y saladas para compartir en familia (próximamente)."
+          disabled={true}
+        />
+
+        <UniverseCard
+          badge="En preparación"
+          icon="🎁"
+          title="Detalles"
+          description="Ideas para regalar con intención: pequeños detalles que cuentan historias."
+          disabled={true}
+        />
+      </section>
+
+      <!-- Bloque “alma” -->
+      <section class="mt-14 md:mt-16">
+        <div class="glass border border-black/5 rounded-[2.5rem] p-10 md:p-12 text-center">
+          <h3 class="text-2xl md:text-3xl font-serif text-gray-800">
+            Hecho con amor, con calma y con propósito
+          </h3>
+          <p class="mt-4 text-gray-500 max-w-2xl mx-auto leading-relaxed">
+            Sophielandia nace como un homenaje a Sophie y crece como un espacio para crear,
+            aprender y compartir. Cada proyecto tiene una historia, y cada puntada guarda un recuerdo.
+          </p>
+
+          <div class="mt-8 flex flex-col sm:flex-row justify-center gap-3">          
+            <a
+              href="https://www.instagram.com/dvbsmll/"
+              class="inline-flex items-center justify-center px-6 py-3 rounded-2xl glass border border-black/5 text-gray-700 hover:bg-white transition"
+            >
+              Síguenos en Instagram
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</BaseLayout>

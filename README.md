@@ -1,3 +1,93 @@
+# Sophielandia 🌸
+
+Sophielandia es un sitio web estático creado con **Astro**, diseñado como un estudio creativo artesanal.  
+El proyecto está pensado para ejecutarse **exclusivamente en una red Docker interna**, sin exposición a internet.
+
+---
+
+## 🧠 Tecnologías
+
+- Astro
+- Tailwind CSS
+- Docker
+- Nginx (Alpine)
+- Docker Bridge Network (`dvegab_network`)
+
+---
+
+## 📂 Estructura del proyecto
+
+```text
+.
+├── src/                 # Código fuente Astro
+├── public/              # Assets públicos (favicon, imágenes)
+├── dist/                # Build de producción (generado)
+├── Dockerfile           # Imagen Docker (Nginx)
+├── nginx.conf           # Configuración Nginx
+├── package.json
+└── README.md
+
+
+---
+
+## 🚀 Build de producción
+
+Antes de ejecutar Docker, genera el build de Astro:
+
+```bash
+npm install
+npm run build
+
+Esto genera el directorio:
+```bash
+dist/
+
+
+---
+
+## 🐳 Docker
+```bash
+docker build -t sophielandia-internal .
+
+```bash
+docker run -d \
+  --name sophie-web \
+  --network dvegab_network \
+  --restart unless-stopped \
+  sophielandia-internal
+
+
+---
+
+## 🌐 Acceso interno
+Desde otros contenedores en la misma red Docker:
+http://sophie-web
+
+---
+
+## 🔐 Seguridad
+- Sin puertos expuestos al host
+- Sin acceso externo
+- Sin IP pública
+- Sin HTTPS (uso interno)
+- Aislado por red Docker
+
+---
+
+## 🔄 Actualización del sitio
+Cada cambio requiere ejecutar nuevamente:
+```bash
+npm run build
+docker build -t sophielandia-internal .
+docker rm -f sophie-web
+docker run -d \
+  --name sophie-web \
+  --network dvegab_network \
+  --restart unless-stopped \
+  sophielandia-internal
+
+
+
 # Astro Starter Kit: Basics
 
 ```sh
