@@ -26,7 +26,7 @@ El proyecto está pensado para ejecutarse **exclusivamente en una red Docker int
 ├── nginx.conf           # Configuración Nginx
 ├── package.json
 └── README.md
-
+```
 
 ## 🚀 Build de producción
 
@@ -35,23 +35,28 @@ Antes de ejecutar Docker, genera el build de Astro:
 ```bash
 npm install
 npm run build
+```
 
 Esto genera el directorio:
 ```bash
 dist/
+```
 
 
 ## 🐳 Docker
+Hacemos el build para generar la imagen:
 ```bash
 docker build -t sophielandia-internal .
+```
 
+Lanzamos el contenedor con las especificaciones que queremos: 
 ```bash
 docker run -d \
   --name sophie-web \
   --network dvegab_network \
   --restart unless-stopped \
   sophielandia-internal
-
+```
 
 
 ## 🌐 Acceso interno
@@ -78,7 +83,7 @@ docker run -d \
   --network dvegab_network \
   --restart unless-stopped \
   sophielandia-internal
-
+```
 
 
 # Astro Starter Kit: Basics
