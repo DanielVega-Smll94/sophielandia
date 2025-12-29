@@ -28,8 +28,6 @@ El proyecto está pensado para ejecutarse **exclusivamente en una red Docker int
 └── README.md
 
 
----
-
 ## 🚀 Build de producción
 
 Antes de ejecutar Docker, genera el build de Astro:
@@ -43,8 +41,6 @@ Esto genera el directorio:
 dist/
 
 
----
-
 ## 🐳 Docker
 ```bash
 docker build -t sophielandia-internal .
@@ -57,13 +53,11 @@ docker run -d \
   sophielandia-internal
 
 
----
 
 ## 🌐 Acceso interno
 Desde otros contenedores en la misma red Docker:
 http://sophie-web
 
----
 
 ## 🔐 Seguridad
 - Sin puertos expuestos al host
@@ -72,7 +66,6 @@ http://sophie-web
 - Sin HTTPS (uso interno)
 - Aislado por red Docker
 
----
 
 ## 🔄 Actualización del sitio
 Cada cambio requiere ejecutar nuevamente:
